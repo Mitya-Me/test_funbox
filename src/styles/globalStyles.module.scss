@@ -1,0 +1,26 @@
+@import './variables.module.scss';
+@import './fonts.module.scss';
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    border: none;
+    font-family: $ff-prime, sans-serif;
+    font-size: $fz-m;
+    color: $clr-text-grey;
+}
+
+input,
+button,
+textarea {
+    font-family: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+ul li {
+    list-style: none;
+}
