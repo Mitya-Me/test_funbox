@@ -1,0 +1,1 @@
+export const mouseDeclonation = quant => quant % 100 === 1 ? 'мышь' : quant % 100 >= 2 && quant % 100 < 5 ? 'мыши' : 'мышей';
