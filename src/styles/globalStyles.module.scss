@@ -8,7 +8,7 @@
     border: none;
     font-family: $ff-prime, sans-serif;
     font-size: $fz-m;
-    color: $clr-text-grey;
+    color: $clr-grey;
 }
 
 input,
@@ -23,4 +23,13 @@ button {
 
 ul li {
     list-style: none;
+}
+
+body {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 5e-05) 49.88%, rgba(0, 0, 0, 0.5) 100%),
+     url('../assets/img/main/bg/main_bg2x.png');
+}
+
+span {
+    color: inherit;
 }
