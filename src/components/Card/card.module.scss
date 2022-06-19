@@ -1,0 +1,207 @@
+@import '../../styles/variables.module.scss';
+
+.card-shell {
+    @media(max-width: 1200px) {
+        margin-bottom: 3%;
+    }
+}
+
+.card {
+    width: 320px;
+    height: 480px;
+    margin-bottom: 100px;
+    position: relative;
+    clip-path: polygon(0 44.00px, 21px 22px, 44.00px 0, 100% 0, 100% 100%, 0 100%);
+    border-radius: 0 12px 12px 12px;
+    overflow: hidden;
+    background-image: url('../../assets/img/card/bg/card_cat2x.png');
+    background-color: $clr-white;
+    background-repeat: no-repeat;
+    background-position: 50% 175%;
+    background-size: 368px 360px;
+    margin: 0 40px;
+    cursor: pointer;
+
+    &--dis {
+        cursor: default;
+        pointer-events: none;
+
+        &.card::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: rgba($color: rgb(235, 235, 235), $alpha: .5);
+        }
+
+        & .card-border>path {
+            fill: $clr-card-dis;
+        }
+
+        & .card__weight-wrap {
+            background-color: $clr-grey;
+        }
+
+        & .card__text-title,
+        & .card__text-flavor {
+            color: $clr-grey;
+        }
+    }
+
+    &--select {
+
+        & .card-border>path {
+            fill: $clr-card-select  !important;
+        }
+
+        &:hover {
+            & .card-border>path {
+                fill: $clr-card-select-h  !important;
+            }
+
+            & .card__weight-wrap {
+                background-color: $clr-card-select-h !important;
+            }
+
+            & .card__text-tagline {
+                color: $clr-card-select-h;
+            }
+        }
+
+        & .card__weight-wrap {
+            background-color: $clr-card-select;
+        }
+    }
+
+    &--def {
+
+        & .card-border>path {
+            fill: $clr-card-def;
+        }
+
+        &:hover {
+            & .card-border>path {
+                fill: $clr-card-def-h;
+            }
+
+            & .card__weight-wrap {
+                background-color: $clr-card-def-h;
+            }
+        }
+    }
+
+    &-wrap {
+        width: 101%;
+        height: 101%;
+        padding: 21px 16px 16px 48px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &-border {
+        position: absolute;
+    }
+
+    &__text {
+
+        &-tagline {
+            font-weight: $fw-m;
+            line-height: $lh-m;
+        }
+
+        &-title {
+            font-size: $fz-xxxl;
+            font-weight: $fw-l;
+            line-height: $lh-xxl;
+            color: $clr-black;
+        }
+
+        &-flavor {
+            font-size: $fz-l;
+            font-weight: $fw-l;
+            line-height: $lh-l;
+            color: $clr-black;
+        }
+
+        &-subtitle {
+            font-size: $fz-s;
+            font-weight: $fw-m;
+            line-height: $lh-s;
+            margin-top: 15px;
+
+            &--bold {
+                font-weight: $fw-l;
+            }
+
+            li {
+                margin-bottom: 5px;
+            }
+        }
+    }
+
+    &__weight {
+        flex-grow: 1;
+        align-self: flex-end;
+        display: flex;
+        align-items: flex-end;
+
+        &-wrap {
+            background-color: $clr-card-def;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px 9.5px 8px 10.5px;
+            color: $clr-white;
+        }
+
+        &-amount {
+            font-size: $fz-xxl;
+            font-weight: $fw-m;
+            line-height: $lh-l;
+            margin-bottom: 5px;
+        }
+
+        &-kg {
+            font-weight: $fw-m;
+            font-size: $fz-m;
+        }
+    }
+
+    &__description {
+        padding-top: 14px;
+        text-align: center;
+
+        &-dot {
+            color: $clr-card-def;
+        }
+
+        &-text {
+            font-size: $fz-xs;
+            font-weight: $fw-m;
+            line-height: $lh-s;
+        
+            &--def {
+                color: $clr-white;
+            }
+
+            &--select {
+                color: $clr-white;
+            }
+
+            &--buy {
+                text-decoration: underline dashed;
+                color: $clr-card-def;
+                font-size: $fz-xs;
+                cursor: pointer;
+            }
+
+            &--disabled {
+                color: $clr-yellow;
+            }
+        }
+    }
+}
