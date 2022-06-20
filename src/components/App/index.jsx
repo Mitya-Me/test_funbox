@@ -36,7 +36,10 @@ const App = () => {
                     <Cards/>
                   </main>
             }
-            <span className={styles.hint}>  Press Alt + Enter to read the answers </span>
+            {answersPageVisibility 
+                ? <span className={styles.hint}>  Сlick on the button to return to the order </span>
+                : <span className={styles.hint}>  Press Alt + Enter to read the answers </span>
+            }
         </div>
     )
 }
