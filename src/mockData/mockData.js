@@ -4,7 +4,7 @@ export const cardsMockData = [
     {flavor: 'с курой', portions: 100, gift: 5, weight: '5', description: 'Филе из цыплят с трюфелями в бульоне', inStock: true}
 ]
 
-export const qustionsAndAnswersMockData = [
+export const questionsAndAnswersMockData = [
     {
          question: 'Расскажите, чем, на ваш взгляд, отличается хорошая верстка от плохой с точки зрения (пользователя, менеджера проекта, дизайнера, верстальщика, клиентского программиста, серверного программиста).',
          answer: `ПОЛЬЗОВАТЕЛЬ: интуитивно понятный дизайн, доступность всех элементов страницы с разных устройств и браузеров,
