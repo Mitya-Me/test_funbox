@@ -7,6 +7,7 @@ import styles from './app.module.scss';
 const App = () => {
     const [answersBtnVisibility, setAnswersBtnVisibility] = useState(false);
     const [answersPageVisibility, setAnswersPageVisibility] = useState(false);
+    const answerBtnHidden =  answersBtnVisibility ? styles['answers--vis'] : ''
 
     useEffect(() => {
     	window.addEventListener('keydown', handleKey);
@@ -27,7 +28,7 @@ const App = () => {
 
     return (
         <div className={styles.wrapper}>
-            {answersBtnVisibility && <div className={styles.answers} onClick={readAnswers}></div>}
+            {<div className={`${styles.answers} ${answerBtnHidden}`} onClick={readAnswers}></div>}
             {answersPageVisibility
                 ? <Answers/>
                 : <main>
